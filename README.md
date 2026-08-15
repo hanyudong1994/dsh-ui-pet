@@ -22,7 +22,7 @@ English intro: a desktop pet browser plugin for DeepSeek Harness — a floating 
 本插件是**浏览器侧 client 插件**，dsh 目前没有树外加载路径，需要把它接入你自己的
 [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 源码检出（clone 一个即可，无需 fork 上游）。
 
-### 方式一：npm 安装（插件发布到 npm 后）
+### 方式一：npm 安装
 
 1. **安装依赖**（在 dsh 检出目录中执行）：
 
