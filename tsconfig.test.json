@@ -16,16 +16,7 @@
     "skipLibCheck": true,
     "types": [
       "node"
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@deepseek-ai/dsh-*": [
-        "./node_modules/@deepseek-ai/dsh-*/src"
-      ],
-      "@deepseek-ai/dsh-*/*": [
-        "./node_modules/@deepseek-ai/dsh-*/src/*"
-      ]
-    }
+    ]
   },
   "include": [
     "src",
