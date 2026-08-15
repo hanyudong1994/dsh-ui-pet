@@ -1,4 +1,4 @@
-# dsh-desktop-pet
+# dsh-ui-pet
 
 DeepSeek Harness 桌面宠物浏览器插件：一只悬浮在 Web GUI 右下角的小猫，随当前会话的活动状态实时变化。
 
@@ -27,7 +27,7 @@ English intro: a desktop pet browser plugin for DeepSeek Harness — a floating 
 1. **安装依赖**（在 dsh 检出目录中执行）：
 
    ```sh
-   pnpm --filter @deepseek-ai/dsh-web-app add dsh-desktop-pet
+   pnpm --filter @deepseek-ai/dsh-web-app add dsh-ui-pet
    ```
 
 2. **注册插件行**：编辑 `packages/bundle/web-app/cordis.patch.yml`，在浏览器插件名单
@@ -36,15 +36,15 @@ English intro: a desktop pet browser plugin for DeepSeek Harness — a floating 
    ```yaml
    # The desktop pet: a floating companion in the frame overlay.
    - id: ui-pet
-     name: 'dsh-desktop-pet'
+     name: 'dsh-ui-pet'
    ```
 
 3. **添加源码路径映射**：编辑检出根目录的 `tsconfig.base.json`，在 `paths` 中加入
    （本插件随 npm 包发布 `src/`；该映射供 tsx 源码启动与 `verify-cordis-config` 解析裸包名）：
 
    ```json
-   "dsh-desktop-pet": ["./node_modules/dsh-desktop-pet/src"],
-   "dsh-desktop-pet/client": ["./node_modules/dsh-desktop-pet/src/client"]
+   "dsh-ui-pet": ["./node_modules/dsh-ui-pet/src"],
+   "dsh-ui-pet/client": ["./node_modules/dsh-ui-pet/src/client"]
    ```
 
 4. **重建并重启**：`pnpm install && pnpm run build`，重启 `pnpm dsh web`，刷新页面即见宠物。
@@ -55,13 +55,13 @@ English intro: a desktop pet browser plugin for DeepSeek Harness — a floating 
 复制到检出的 `packages/client/ui-pet/`，然后：
 
 1. `tsconfig.client.json` 的 `references` 加入 `{ "path": "./packages/client/ui-pet" }`
-2. `packages/bundle/web-app/package.json` 的 `dependencies` 加入 `"dsh-desktop-pet": "workspace:^"`
+2. `packages/bundle/web-app/package.json` 的 `dependencies` 加入 `"dsh-ui-pet": "workspace:^"`
 3. `cordis.patch.yml` 按方式一第 2 步加行
 4. `tsconfig.base.json` 的 `paths` 加入：
 
    ```json
-   "dsh-desktop-pet": ["./packages/client/ui-pet/src"],
-   "dsh-desktop-pet/client": ["./packages/client/ui-pet/src/client"]
+   "dsh-ui-pet": ["./packages/client/ui-pet/src"],
+   "dsh-ui-pet/client": ["./packages/client/ui-pet/src/client"]
    ```
 
 5. `pnpm install && pnpm run build`，重启 `pnpm dsh web`
@@ -97,3 +97,4 @@ pnpm run watch      # tsdown 监听重打包（配合 dsh 的 dev:web 热更新�
 
 MIT。代码衍生自 deepseek-harness（MIT，Copyright (c) 2026 DeepSeek），
 版权行见 [LICENSE](./LICENSE)。
+

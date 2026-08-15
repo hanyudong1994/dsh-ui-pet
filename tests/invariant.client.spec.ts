@@ -5,7 +5,7 @@ import * as PetInvariant from '../src/invariant.ts'
 
 describe('invariant companion', () => {
   it('declares its service edges', () => {
-    expect(PetInvariant.name).toBe('dsh-desktop-pet-invariant')
+    expect(PetInvariant.name).toBe('dsh-ui-pet-invariant')
     expect(PetInvariant.inject).toEqual(['invariants'])
   })
 
@@ -15,3 +15,4 @@ describe('invariant companion', () => {
     await expect(ctx.plugin(PetInvariant).await()).resolves.toBeDefined()
   })
 })
+

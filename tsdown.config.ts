@@ -13,7 +13,7 @@ import { basename, dirname, resolve as resolvePath, sep } from 'node:path'
 import type { Plugin, UserConfig } from 'tsdown'
 import { transform } from 'lightningcss'
 
-const ID = 'dsh-desktop-pet'
+const ID = 'dsh-ui-pet'
 
 /**
  * The module specifiers the dsh web shell seeds into its frozen module table
@@ -126,4 +126,5 @@ const clientConfig: UserConfig = {
 }
 
 export default [libConfig, clientConfig]
+
 

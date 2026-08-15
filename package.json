@@ -1,11 +1,11 @@
 {
-  "name": "dsh-desktop-pet",
+  "name": "dsh-ui-pet",
   "description": "DeepSeek Harness desktop pet browser plugin: a floating cat over the conversation that reacts to current-session activity",
   "version": "0.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanyudong1994/dsh-desktop-pet.git"
+    "url": "git+https://github.com/hanyudong1994/dsh-ui-pet.git"
   },
   "type": "module",
   "main": "lib/index.js",
@@ -74,4 +74,5 @@
     "tsconfig.json"
   ]
 }
+
 
